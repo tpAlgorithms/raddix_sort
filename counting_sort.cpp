@@ -9,7 +9,12 @@ int get_digit(const int &data) {
 
 const int abc_size = 10;
 
-void counting_sort(int *a, int n, int(&_get_digit)(const int &)) {
+template <typename less_t>
+void counting_sort(int *a, int n, const less_t &_get_digit) {
+  
+//}
+
+//void counting_sort(int *a, int n, int(&_get_digit)(const int &)) {
   
   int *cnt = new int[abc_size];
   
